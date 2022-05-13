@@ -2,6 +2,7 @@ package LambdaExpression;
 
 import util.TriFunction;
 
+//3개의 인자값을 받는 Function Interface 만들기
 public class TriFunctionStudy{
 
 	public static void main(String[] args) {
