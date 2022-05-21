@@ -1,5 +1,6 @@
 package Optional.model;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,9 +28,13 @@ public class User {
         this.name = name;
         return this;
     }
+//
+//    public String getEmailAddress() {
+//        return emailAddress;
+//    }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public Optional<String> getEmailAddress() {
+        return Optional.ofNullable(emailAddress);
     }
 
     public User setEmailAddress(String emailAddress) {

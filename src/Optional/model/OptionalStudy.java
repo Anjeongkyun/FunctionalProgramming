@@ -18,7 +18,7 @@ public class OptionalStudy {
 
 //        System.out.println("same ? " + userEquals(user1, user2));
 
-        String someEmail = "jkan@naver.com";
+        String someEmail = "dkswjdrbs12@naver.com";
         String nullEmail = null;
 
         Optional<String> maybeEmail = Optional.of(someEmail);
@@ -26,22 +26,21 @@ public class OptionalStudy {
         Optional<String> maybeEmail3 = Optional.ofNullable(someEmail);
         Optional<String> maybeEmail4 = Optional.ofNullable(nullEmail);
 
-        System.out.println(maybeEmail);
-        System.out.println(maybeEmail2);
-        System.out.println(maybeEmail3);
-        System.out.println(maybeEmail4);
-
         String email = maybeEmail.get();
         System.out.println(email);
 
-        if(maybeEmail2.isPresent()){
-            System.out.println(maybeEmail2.get());
+        if(maybeEmail.isPresent()){
+            System.out.println(maybeEmail.get());
         }
 
         String defaultEmail= "default@email.com";
         String email3 = maybeEmail2.orElse(defaultEmail);
         String email4 = maybeEmail2.orElseGet(() -> defaultEmail);
-        String email5 = maybeEmail.orElseThrow(() -> new RuntimeException("email not present"));
+        String email5 = maybeEmail2.orElseThrow(() -> new RuntimeException("email not present"));
+
+        System.out.println(email3);
+        System.out.println(email4);
+        System.out.println(email5);
 
 
     }
