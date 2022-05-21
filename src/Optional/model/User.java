@@ -28,8 +28,8 @@ public class User {
         return this;
     }
 
-    public Optional<String> getEmailAddress() {
-        return Optional.ofNullable(emailAddress);
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
     public User setEmailAddress(String emailAddress) {
